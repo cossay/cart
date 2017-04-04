@@ -1,0 +1,17 @@
+{
+    "name": "cossay/cart",
+    "description": "Shopping cart",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Agbitor Cosman",
+            "email": "agbitorcosman@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Cosman\\Cart\\": "src/Cosman/Cart"
+        }
+    }
+}

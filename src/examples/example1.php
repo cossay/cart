@@ -50,5 +50,5 @@ echo $cart, PHP_EOL;
 //or
 echo json_encode($cart);
 
-//Save a cart to a persistence storate
+//Save a cart to a persistence storage
 $cart->save();

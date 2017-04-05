@@ -48,7 +48,21 @@ echo $cart->getGrandTotal(), PHP_EOL;
 //Convert cart to JSON
 echo $cart, PHP_EOL;
 //or
-echo json_encode($cart);
+echo json_encode($cart), PHP_EOL;
 
-//Save a cart to a persistence storage
+//Save a cart to a persistence storate
 $cart->save();
+
+//Get an item from the cart by key
+echo $cart->getItemByKey(1), PHP_EOL;
+
+//Remove item from cart
+$cart->removeItem($item1);
+
+echo $cart, PHP_EOL;
+
+//Remove item by key
+$cart->removeItemByKey(2);
+$cart->removeItemByKey(3, 2);
+echo PHP_EOL;
+echo $cart, PHP_EOL;

@@ -38,6 +38,18 @@ class Cart implements \JsonSerializable {
 	}
 
 	/**
+	 * Fetches an item by key
+	 *
+	 * @param mixed $key        	
+	 * @return null|CartItemInterface
+	 */
+	public function getItemByKey($key) {
+
+		return array_key_exists($key, $this->items) ? $this->items[$key] : null;
+	
+	}
+
+	/**
 	 * Checks if a given item is already in the cart
 	 *
 	 * @param CartItemInterface $item        	
@@ -106,7 +118,13 @@ class Cart implements \JsonSerializable {
 	 */
 	public function removeItemByKey($key, $quantity = null) {
 
-		return $this->removeItem(new CartItem($key), $quantity);
+		$item = $this->getItemByKey($key);
+		
+		if (null !== $item) {
+			$this->removeItem($item, $quantity);
+		}
+		
+		return $this;
 	
 	}
 

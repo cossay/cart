@@ -170,6 +170,12 @@ class Cart implements \JsonSerializable {
 	
 	}
 
+	/**
+	 * Returns grand total for a cart
+	 *
+	 * @param number $digits        	
+	 * @return double
+	 */
 	public function getGrandTotal($digits = 2) {
 
 		$total = 0;
@@ -182,6 +188,12 @@ class Cart implements \JsonSerializable {
 	
 	}
 
+	/**
+	 * Returns total discount for a cart
+	 *
+	 * @param number $digits        	
+	 * @return double
+	 */
 	public function getTotalDiscount($digits = 2) {
 
 		$total = 0;
@@ -194,6 +206,12 @@ class Cart implements \JsonSerializable {
 	
 	}
 
+	/**
+	 * Returns total tax for a cart
+	 *
+	 * @param number $digits        	
+	 * @return double
+	 */
 	public function getTotalTax($digits = 2) {
 
 		$total = 0;
@@ -244,6 +262,11 @@ class Cart implements \JsonSerializable {
 	
 	}
 
+	/**
+	 * Returns a string representation of a cart
+	 *
+	 * @return string
+	 */
 	public function __toString() {
 
 		return json_encode($this);
